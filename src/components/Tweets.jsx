@@ -2,9 +2,15 @@ import { useEffect, useState } from "react"
 import { TextField } from "@mui/material";
 import OutsideClickHandler from 'react-outside-click-handler';
 import SingleTweet from "./singletweet";
+import { click } from "@testing-library/user-event/dist/click";
 
 const Tweets = () => {
     const [tweets, setTweets] = useState([])
+    const [answer, setAnswer] = useState([])
+
+    const handleClick=()=>{
+
+    }
     
     const fetchTweets = () => {
         fetch('http://localhost:5000/tweets')
@@ -13,16 +19,34 @@ const Tweets = () => {
                 setTweets(data)
             })
     }
-   
+    const fetchAnswer = () => {
+        fetch('http://localhost:5000/answers')
+            .then((respnse) => respnse.json())
+            .then(data => {
+                setAnswer(data)
+        })
+    }
     useEffect(() => {
         fetchTweets()
+        fetchAnswer()
     }, [])
 
     const deleteTweet = (id) => {
         fetch(`http://localhost:5000/tweets/${id}`, { method: 'DELETE' })
             .then(() => {
                 fetchTweets()
+                console.log(answer[0].id);
+                let filterAnswer=answer.filter( answer => answer.originalID===id);
+                console.log(filterAnswer);
             })
+           
+       
+       
+       
+        
+        
+
+    
     }
 
     const updateTweet = (id, tweet) => {
@@ -34,9 +58,23 @@ const Tweets = () => {
     }
     return (
         <div>
+        <div className="post" >
+            <form onSubmit={handleClick}>
+                <div className="postParts">
+                <input className="name" type="text"></input>
+                </div>
+                <div className="postParts">
+                <input className="message" placeholder="What's happening?"></input>
+                
+                <button className="send"></button>
+                </div>
+            </form>
+        </div>
+        <div className="twts">
             {tweets.map((t) => (
                 <SingleTweet author={t.author} day={t.day} id={t.id} message={t.message}  deleteTweet={deleteTweet}/>
             ))}
+        </div>
         </div>
     )
 }

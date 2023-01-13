@@ -111,6 +111,16 @@ button:hover{
 .Tweet:hover{
   background-color: rgba(220, 220, 220, 0.10);  
 }
+.answer{
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    font-size: smaller;
+    
+}
+.answer:hover{
+    background-color: rgba(220, 220, 220, 0.10); 
+}
 
 .Tweetrow1{
     display: flex;
@@ -196,6 +206,45 @@ button:hover{
 
 .buttonsTweet{
     background-color: inherit;
+}
+
+.be{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 200px;
+}
+.we{
+    height: 80px;
+    background-color: rgba(220, 220, 220, 0.70); ;
+    border-radius: 15px;
+    padding: 20px;
+    margin: 20px;
+}
+.error{
+    font-weight: bold;
+    padding-bottom: 10px;
+    text-align: center;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+.post{
+    display: flex;
+    padding: 0px 20px;
+}
+.postParts{
+    flex-direction: column;
+    padding-top: 5px;
+}
+.message{
+    width:  520px;
+    height: 200px;
+    border-left: none;
+    border-right: none;
+    border-color: gainsboro;
+    align-content: top;
 }
 
 @media(max-width: 1200px) {

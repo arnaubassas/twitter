@@ -9,40 +9,34 @@
     },
     {
       "id": 3,
-      "author": "Francesc",
-      "message": "Mira quina bici",
+      "author": "Arnau",
+      "message": "hehe he guanyar al aventureros",
       "hour": "",
-      "day": "18.02.2022"
-    },
-    {
-      "id": 4,
-      "author": "Papa",
-      "message": "Destroyer",
-      "hour": "",
-      "day": "18.02.2022"
-    },
-    {
-      "id": 6,
-      "author": "Montse",
-      "message": "pumisimba",
-      "hour": "",
-      "day": "18.02.2022"
+      "day": "19.03.2021"
     }
   ],
   "Answers": [
     {
       "id": 1,
-      "author": "Montse",
+      "author": "Arnau",
       "message": "rostoooooooll",
-      "originalID": 1,
+      "originalID": 3,
       "hour": "",
       "day": ""
     },
     {
       "id": 2,
-      "author": "Arnau",
+      "author": "miquel",
       "message": "rostoooooooll",
-      "originalID": 2,
+      "originalID": 3,
+      "hour": "",
+      "day": ""
+    },
+    {
+      "id": 3,
+      "author": "beneeeeit",
+      "message": "rostoooooooll",
+      "originalID": 4,
       "hour": "",
       "day": ""
     }
