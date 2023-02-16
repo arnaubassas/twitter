@@ -35,9 +35,9 @@ const Tweets = () => {
         fetch(`http://localhost:5000/tweets/${id}`, { method: 'DELETE' })
             .then(() => {
                 fetchTweets()
-                console.log(answer[0].id);
+                
                 let filterAnswer=answer.filter( answer => answer.originalID===id);
-                console.log(filterAnswer);
+                console.log(id);
             })
            
        
@@ -72,7 +72,7 @@ const Tweets = () => {
         </div>
         <div className="twts">
             {tweets.map((t) => (
-                <SingleTweet author={t.author} day={t.day} id={t.id} message={t.message}  deleteTweet={deleteTweet}/>
+                <SingleTweet author={t.author} day={t.day} key={t.id} id={t.id} message={t.message}  deleteTweet={deleteTweet}/>
             ))}
         </div>
         </div>
