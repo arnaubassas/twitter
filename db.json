@@ -1,17 +1,15 @@
 {
   "tweets": [
     {
-      "id": 1,
+      "id": 2,
       "author": "Arnau",
       "message": "hehe he guanyar al aventureros",
-      "hour": "",
       "day": "19.03.2021"
     },
     {
       "id": 3,
       "author": "Arnau",
       "message": "hehe he guanyar al aventureros",
-      "hour": "",
       "day": "19.03.2021"
     }
   ],
@@ -21,7 +19,6 @@
       "author": "Arnau",
       "message": "rostoooooooll",
       "originalID": 3,
-      "hour": "",
       "day": ""
     },
     {
@@ -29,7 +26,6 @@
       "author": "miquel",
       "message": "rostoooooooll",
       "originalID": 3,
-      "hour": "",
       "day": ""
     },
     {
@@ -37,8 +33,42 @@
       "author": "beneeeeit",
       "message": "rostoooooooll",
       "originalID": 4,
-      "hour": "",
       "day": ""
+    },
+    {
+      "author": "pelly",
+      "id": 39,
+      "message": "rostoll",
+      "originalId": 2,
+      "day": "18/2/2023"
+    },
+    {
+      "author": "francesc",
+      "id": 92,
+      "message": "rostoll",
+      "originalId": 3,
+      "day": "18/2/2023"
+    },
+    {
+      "author": "pelly",
+      "id": 93,
+      "message": "rostoll",
+      "originalID": 3,
+      "day": "18/2/2023"
+    },
+    {
+      "author": "puta vida",
+      "id": 8,
+      "message": "molt la veritat",
+      "originalID": 3,
+      "day": "18/2/2023"
+    },
+    {
+      "author": "miquel bulb sobira",
+      "id": 48,
+      "message": "tu madre por si acaso",
+      "originalID": 2,
+      "day": "18/2/2023"
     }
   ]
 }

@@ -3,15 +3,38 @@ import { TextField } from "@mui/material";
 import OutsideClickHandler from 'react-outside-click-handler';
 import SingleTweet from "./singletweet";
 import { click } from "@testing-library/user-event/dist/click";
+import Axios from "axios";
 
 const Tweets = () => {
     const [tweets, setTweets] = useState([])
     const [answer, setAnswer] = useState([])
+    const [values, setValues] = useState({ id: "", author: "", message: "", day: "" });
 
-    const handleClick=()=>{
+    const handleChange = event => {
+        const { name, value } = event.target;
+        values.id = Math.floor(Math.random() * (100 - 1 + 1) + 1);
+        values.day = new Date();
+        values.day = (values.day).toLocaleDateString();
+        setValues({ ...values, [name]: value });
 
+    };
+
+    const handleClick = (e) => {
+        e.preventDefault();
+        console.log({ values });
+        Axios.post('http://localhost:5000/tweets', {
+            author: values.author,
+            id: values.id,
+            message: values.message,
+            day: values.day,
+        })
+        e.target.reset()
+
+
+        fetchTweets()
     }
-    
+
+
     const fetchTweets = () => {
         fetch('http://localhost:5000/tweets')
             .then((respnse) => respnse.json())
@@ -19,13 +42,15 @@ const Tweets = () => {
                 setTweets(data)
             })
     }
+
     const fetchAnswer = () => {
         fetch('http://localhost:5000/answers')
             .then((respnse) => respnse.json())
             .then(data => {
                 setAnswer(data)
-        })
+            })
     }
+
     useEffect(() => {
         fetchTweets()
         fetchAnswer()
@@ -35,47 +60,46 @@ const Tweets = () => {
         fetch(`http://localhost:5000/tweets/${id}`, { method: 'DELETE' })
             .then(() => {
                 fetchTweets()
-                
-                let filterAnswer=answer.filter( answer => answer.originalID===id);
+
+                let filterAnswer = answer.filter(answer => answer.originalID === id);
                 console.log(id);
             })
-           
-       
-       
-       
-        
-        
 
-    
+
+
+
+
+
+
+
     }
 
     const updateTweet = (id, tweet) => {
         fetch(`http://localhost:5000/tweets/${id}`, { method: 'PUT' })
     }
 
-    const createTweet = (tweet) => {
-        fetch(`http://localhost:5000/tweets`, { method: 'POST' })
-    }
+
+
+
     return (
         <div>
-        <div className="post" >
-            <form onSubmit={handleClick}>
-                <div className="postParts">
-                <input className="name" type="text"></input>
-                </div>
-                <div className="postParts">
-                <input className="message" placeholder="What's happening?"></input>
-                
-                <button className="send"></button>
-                </div>
-            </form>
-        </div>
-        <div className="twts">
-            {tweets.map((t) => (
-                <SingleTweet author={t.author} day={t.day} key={t.id} id={t.id} message={t.message}  deleteTweet={deleteTweet}/>
-            ))}
-        </div>
-        </div>
+            <div className="post" >
+                <form onSubmit={(e) => handleClick(e)} id="form">
+                    <div className="postParts">
+                        <input className="name" type="text" name="author" placeholder="Name" values={values.message} onChange={handleChange}></input>
+                    </div>
+                    <div className="postParts">
+                        <textarea className="message" placeholder="What's happening?" name="message" maxlength="280" values={values.message} onChange={handleChange}></textarea>
+                    </div>
+                    <div className="buttonPost"><button className="send" type='submit'>Tweet</button></div>
+                </form>
+            </div>
+            <div className="twts">
+                {tweets.map((t) => (
+                    <SingleTweet author={t.author} day={t.day} key={t.id} id={t.id} message={t.message} deleteTweet={deleteTweet} />
+                ))}
+            </div>
+        </div >
     )
 }
 

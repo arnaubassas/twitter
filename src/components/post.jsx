@@ -4,12 +4,40 @@ import Error from "./error"
 import SingleAnswer from "./singleAnswer"
 import SingleTweet from "./singletweet"
 import Tweets from "./Tweets"
+import Axios from "axios";
+
 
 const Post = () => {
     const [tweet, setTweet] = useState()
     const [answer, setAnswer] = useState([])
     const { id } = useParams()
+    const [values, setValues] = useState({ id: "", author: "", message: "", originalId: "", day: "" });
 
+    const handleChange = event => {
+        const { name, value } = event.target;
+        values.id = Math.floor(Math.random() * (100 - 1 + 1) + 1);
+        values.day = new Date();
+        values.day = (values.day).toLocaleDateString();
+        values.originalId = tweet.id;
+        setValues({ ...values, [name]: value });
+
+    };
+
+    const handleClick = (e) => {
+        e.preventDefault();
+        console.log({ values });
+        Axios.post('http://localhost:5000/answers', {
+            author: values.author,
+            id: values.id,
+            message: values.message,
+            originalID: values.originalId,
+            day: values.day,
+        })
+        e.target.reset()
+
+
+        fetchAnswer()
+    }
 
 
     const fetchTweets = () => {
@@ -44,29 +72,37 @@ const Post = () => {
             })
     }
 
-    const updateTweet = (id, answer) => {
-        fetch(`http://localhost:5000/Answers/${id}`, { method: 'PUT' })
-    }
 
-    const createTweet = (answer) => {
-        fetch(`http://localhost:5000/Answers`, { method: 'POST' })
-    }
     if (!tweet) {
         return null
     }
     if (tweet.id == undefined) {
-        return (  
+        return (
             <div>
-                <Error/>
+                <Error />
             </div>
         )
     } else {
         return (
             <div>
-                <SingleTweet author={tweet.author} day={tweet.day} id={tweet.id} message={tweet.message} deleteTweet={deleteTweet} />
+                <SingleTweet author={tweet.author} day={tweet.day} key={tweet.id} id={tweet.id} message={tweet.message} deleteTweet={deleteTweet} />
+                <div className="post" >
+                    <form onSubmit={(e) => handleClick(e)} id="form">
+                        <div className="postParts">
+                            <input className="name" type="text" name="author" placeholder="Name" values={values.message} onChange={handleChange}></input>
+                        </div>
+                        <div className="postParts">
+                            <textarea className="reply" placeholder="Tweet your reply?" name="message" maxlength="280" values={values.message} onChange={handleChange}></textarea>
+                        </div>
+                        <div className="buttonPost"><button className="send" type='submit'>Reply</button></div>
+                    </form>
+                </div>
+
+
                 {answer.map((t) => (
-                    <SingleAnswer PID={id} author={t.author} day={t.day} id={t.id} originalID={t.originalID} message={t.message} deleteAnswer={deleteAnswer} />
+                    <SingleAnswer PID={id} author={t.author} day={t.day} key={t.id} id={t.id} originalID={t.originalID} message={t.message} deleteAnswer={deleteAnswer} />
                 ))}
+
             </div>
         )
     }

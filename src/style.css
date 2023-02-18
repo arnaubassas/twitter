@@ -1,29 +1,31 @@
-.App{
+.App {
     display: flex;
     max-width: 1200px;
     box-sizing: border-box;
-}   
+}
 
-.right{
+.right {
     flex-direction: column;
     width: 30%;
 }
-.middle{
+
+.middle {
     display: flex;
     width: 50%;
     flex-direction: column;
 }
 
-.left{  
+.left {
     width: 20%;
     align-items: center;
 }
-.lane{
+
+.lane {
     width: 1px;
     background-color: gainsboro;
 }
 
-button{
+button {
     background-color: white;
     border: none;
     border-radius: 40px;
@@ -31,29 +33,36 @@ button{
     padding: 10px;
     text-align: center;
     cursor: pointer;
-    
+
 }
-button:hover{
-    background-color:  rgba(211, 211, 200, 0.56);
+
+button:hover {
+    background-color: rgba(211, 211, 200, 0.56);
 }
-.button{
+
+.button {
     margin: 12px 0px;
-    
+
 }
-.logo{
+
+.logo {
     border-radius: 100%;
 }
-.logo:hover{
+
+.logo:hover {
     background-color: rgba(191, 191, 239, 0.225);
 }
-.Explore{
+
+.Explore {
     font-weight: bolder;
     padding-right: 30px;
 }
-.Settings{
+
+.Settings {
     padding-right: 30px;
 }
-.boxright{
+
+.boxright {
     border: solid;
     border-color: gainsboro;
     border-width: 1px;
@@ -65,64 +74,81 @@ button:hover{
     font-weight: bolder;
     margin-left: 30px;
 }
-.Copyright{
+
+.Copyright {
     Margin: 20px;
     margin-left: 50px;
-    
+
 }
-.insidebutton{
-    display:flex;
+
+.insidebutton {
+    display: flex;
     align-items: center;
 }
-.Searchbutton{
+
+.Searchbutton {
     height: 40px;
     display: none;
 }
-.SearchIn{
+
+.SearchIn {
     width: 80%;
     margin-top: 5px;
     margin-left: 15px;
     height: 40px;
-    border:none;
+    border: none;
     border-radius: 20px;
     background-color: rgba(220, 220, 220, 0.61);
-    padding-left:30px;
+    padding-left: 30px;
 }
-.SearchIn:focus{
+
+.SearchIn:focus {
     outline: none;
     border: solid;
-    border-color:rgba(15, 91, 136, 0.603);
+    border-color: rgba(15, 91, 136, 0.603);
     border-width: 1px;
     background-color: white;
     border-width: 1px;
 }
 
-.Cell{
+.Cell {
     margin-top: 15px;
 
 }
 
-.Tweet{
+.Tweet {
     display: flex;
     flex-direction: column;
     box-sizing: border-box;
-    
+
 }
-.Tweet:hover{
-  background-color: rgba(220, 220, 220, 0.10);  
+
+.Tweet:hover {
+    background-color: rgba(220, 220, 220, 0.10);
 }
-.answer{
+
+.answer {
     display: flex;
     flex-direction: column;
     box-sizing: border-box;
     font-size: smaller;
-    
-}
-.answer:hover{
-    background-color: rgba(220, 220, 220, 0.10); 
+
+
 }
 
-.Tweetrow1{
+.answer:hover {
+    background-color: rgba(220, 220, 220, 0.10);
+}
+
+.answ {
+    padding-left: 25px;
+}
+
+.answ:hover {
+    background-color: rgba(220, 220, 220, 0.10);
+}
+
+.Tweetrow1 {
     display: flex;
     justify-content: left;
     flex-direction: row;
@@ -130,33 +156,38 @@ button:hover{
     align-items: center;
     justify-content: space-between
 }
-.Tweetrow2{
+
+.Tweetrow2 {
     display: flex;
     justify-content: left;
     flex-direction: row;
     padding: 0 10px 0 15px;
 }
 
-.Tweetlane{
+.Tweetlane {
     height: 1px;
     background-color: rgba(220, 220, 220, 0.61);
 }
-.Username{
+
+.Username {
     font-weight: bolder;
     display: flex;
 }
-.day{
+
+.day {
     font-weight: normal;
     color: grey;
     padding-left: 25px;
 }
-.buttonoptions{
+
+.buttonoptions {
     padding: 6px;
-    margin:0px;
+    margin: 0px;
     border-radius: 100%;
     background-color: inherit;
 }
-.buttonoptions:hover{
+
+.buttonoptions:hover {
     background-color: rgba(29, 161, 242, 0.245);
 }
 
@@ -171,7 +202,7 @@ button:hover{
     width: 70px;
     border: 15px;
     overflow: hidden;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
 }
 
 .dropdown-content button {
@@ -180,102 +211,180 @@ button:hover{
     padding: 5px;
     text-decoration: none;
 }
+
 .dropdown-content button:hover {
     color: #FFFFFF;
     background-color: #00A4BD;
 }
-.Delete{
-    color: black;
-    font-size: small;
-    border-radius: 0;
-    width: 70px;
-}
-.Edit{
+
+.Delete {
     color: black;
     font-size: small;
     border-radius: 0;
     width: 70px;
 }
 
-.Tweetrow3{
+.Edit {
+    color: black;
+    font-size: small;
+    border-radius: 0;
+    width: 70px;
+}
+
+.Tweetrow3 {
     display: flex;
     box-sizing: border-box;
     padding: 10px 30px;
     justify-content: space-evenly;
 }
 
-.buttonsTweet{
+.buttonsTweet {
     background-color: inherit;
 }
 
-.be{
+.be {
     display: flex;
     align-items: center;
     justify-content: center;
     height: 200px;
 }
-.we{
+
+.we {
     height: 80px;
-    background-color: rgba(220, 220, 220, 0.70); ;
+    background-color: rgba(220, 220, 220, 0.70);
+    ;
     border-radius: 15px;
     padding: 20px;
     margin: 20px;
 }
-.error{
+
+.error {
     font-weight: bold;
     padding-bottom: 10px;
     text-align: center;
 }
-a{
+
+a {
     text-decoration: none;
     color: inherit;
 }
-.post{
+
+.post {
     display: flex;
-    padding: 0px 20px;
+    padding: 0px 0px;
+    border-top: solid 1px;
+    border-color: rgba(220, 220, 220, 0.70);
 }
-.postParts{
+
+.postParts {
     flex-direction: column;
-    padding-top: 5px;
+    padding: 5px 20px 0 20px;
 }
-.message{
-    width:  520px;
-    height: 200px;
-    border-left: none;
-    border-right: none;
+
+.message {
+    width: 520px;
+    height: 100px;
+    border: none;
     border-color: gainsboro;
     align-content: top;
+    padding-top: 10px;
+    outline: none;
+    resize: none;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    hyphens: auto;
+}
+
+.message:focus {
+    border: none;
+    outline: none;
+}
+
+.reply {
+    width: 520px;
+    height: 80px;
+    border: none;
+    border-color: gainsboro;
+    align-content: top;
+    padding-top: 10px;
+    outline: none;
+    resize: none;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    hyphens: auto;
+}
+
+.reply:focus {
+    border: none;
+    outline: none;
+}
+
+.name {
+    border-color: rgba(220, 220, 220, 0.70);
+}
+
+.name:focus {
+    outline: none;
+}
+
+.buttonPost {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    border-top: solid 1px;
+    border-color: rgba(220, 220, 220, 0.70);
+    height: 55px;
+}
+
+
+.send {
+    background-color: rgba(15, 91, 136, 0.603);
+    color: white;
+    font-size: medium;
+    padding: 7px 15px;
+    height: 35px;
+}
+
+.send:hover {
+    background-color: rgba(15, 91, 136, 0.603);
 }
 
 @media(max-width: 1200px) {
-    span{
+    span {
         display: none;
     }
-    .left{
+
+    .left {
         width: 50px;
     }
-    .Explore{
+
+    .Explore {
         padding-right: 10px;
         padding: 10px;
     }
-    .Settings{
+
+    .Settings {
         padding-right: 5px;
         padding: 10px;
     }
-    button{
-        padding: 5px;      
+
+    button {
+        padding: 5px;
     }
 }
+
 @media(max-width: 800px) {
-    .right{
+    .right {
         display: none;
         width: 0%;
     }
-    .middle{
+
+    .middle {
         width: 90%;
     }
-    .laneright{
+
+    .laneright {
         display: none;
     }
-        
+
 }
