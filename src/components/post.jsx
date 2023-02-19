@@ -64,6 +64,13 @@ const Post = () => {
             .then(() => {
                 fetchAnswer()
             })
+        let filterAnswer = answer.filter(answer => answer.originalID === id);
+        let length = filterAnswer.length;
+        for (let i = 0; i < length; i++) {
+            fetch(`http://localhost:5000/answers/${filterAnswer[i].id}`, { method: 'DELETE' })
+        }
+        fetchTweets()
+
     }
     const deleteAnswer = (id) => {
         fetch(`http://localhost:5000/Answers/${id}`, { method: 'DELETE' })
@@ -92,7 +99,7 @@ const Post = () => {
                             <input className="name" type="text" name="author" placeholder="Name" values={values.message} onChange={handleChange}></input>
                         </div>
                         <div className="postParts">
-                            <textarea className="reply" placeholder="Tweet your reply?" name="message" maxlength="280" values={values.message} onChange={handleChange}></textarea>
+                            <textarea className="reply" placeholder="Tweet your reply?" name="message" maxLength="280" values={values.message} onChange={handleChange}></textarea>
                         </div>
                         <div className="buttonPost"><button className="send" type='submit'>Reply</button></div>
                     </form>

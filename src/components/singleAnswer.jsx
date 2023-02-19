@@ -20,7 +20,7 @@ const SingleAnswer = ({ PID, author, day, id, originalID, message, oID, deleteAn
                             {down &&
                                 <div className="dropdown-content" ref={ref}>
                                     <button onClick={() => deleteAnswer(id)} className="Delete">Delete</button>
-                                    <button className="Edit">Edit</button>
+                                    {/* <button className="Edit">Edit</button> */}
                                 </div>
                             }
                         </div>

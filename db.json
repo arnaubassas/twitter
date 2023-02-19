@@ -1,33 +1,6 @@
 {
-  "tweets": [
-    {
-      "id": 2,
-      "author": "Arnau",
-      "message": "hehe he guanyar al aventureros",
-      "day": "19.03.2021"
-    },
-    {
-      "id": 3,
-      "author": "Arnau",
-      "message": "hehe he guanyar al aventureros",
-      "day": "19.03.2021"
-    }
-  ],
+  "tweets": [],
   "Answers": [
-    {
-      "id": 1,
-      "author": "Arnau",
-      "message": "rostoooooooll",
-      "originalID": 3,
-      "day": ""
-    },
-    {
-      "id": 2,
-      "author": "miquel",
-      "message": "rostoooooooll",
-      "originalID": 3,
-      "day": ""
-    },
     {
       "id": 3,
       "author": "beneeeeit",
@@ -50,25 +23,25 @@
       "day": "18/2/2023"
     },
     {
-      "author": "pelly",
-      "id": 93,
-      "message": "rostoll",
-      "originalID": 3,
-      "day": "18/2/2023"
-    },
-    {
-      "author": "puta vida",
-      "id": 8,
-      "message": "molt la veritat",
-      "originalID": 3,
-      "day": "18/2/2023"
-    },
-    {
-      "author": "miquel bulb sobira",
-      "id": 48,
-      "message": "tu madre por si acaso",
+      "author": "montse",
+      "id": 64,
+      "message": "casi pero no\n",
       "originalID": 2,
       "day": "18/2/2023"
+    },
+    {
+      "author": "francesco ",
+      "id": 25,
+      "message": "el cotxe mas rapido de tuti italia\n",
+      "originalID": 2,
+      "day": "18/2/2023"
+    },
+    {
+      "author": "asdasdas",
+      "id": 60,
+      "message": "asdsadasdas",
+      "originalID": 35,
+      "day": "19/2/2023"
     }
   ]
 }

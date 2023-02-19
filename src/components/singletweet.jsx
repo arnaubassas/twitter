@@ -11,7 +11,6 @@ const SingleTweet = ({ author, day, id, message, deleteTweet }) => {
         setDown(false)
     })
     const deleteWithoutPropagation = (e) => {
-        console.log(id)
         e.preventDefault(); deleteTweet(id);
     };
     const outpropagation = (e) => {
