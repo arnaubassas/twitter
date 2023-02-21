@@ -1,20 +1,31 @@
 {
-  "tweets": [],
-  "Answers": [
+  "tweets": [
+    {
+      "id": 2,
+      "author": "montse",
+      "message": "rostoooooooll",
+      "day": "19/02/2023"
+    },
     {
       "id": 3,
       "author": "beneeeeit",
       "message": "rostoooooooll",
-      "originalID": 4,
-      "day": ""
+      "day": "19/02/2023"
     },
     {
-      "author": "pelly",
-      "id": 39,
-      "message": "rostoll",
-      "originalId": 2,
-      "day": "18/2/2023"
+      "author": "asdas",
+      "id": 78,
+      "message": "asdasdasasd",
+      "day": "19/2/2023"
     },
+    {
+      "author": "mama",
+      "id": 61,
+      "message": "a sopar\n",
+      "day": "20/2/2023"
+    }
+  ],
+  "Answers": [
     {
       "author": "francesc",
       "id": 92,
@@ -25,7 +36,7 @@
     {
       "author": "montse",
       "id": 64,
-      "message": "casi pero no\n",
+      "message": "casi pero no",
       "originalID": 2,
       "day": "18/2/2023"
     },
@@ -37,10 +48,10 @@
       "day": "18/2/2023"
     },
     {
-      "author": "asdasdas",
-      "id": 60,
-      "message": "asdsadasdas",
-      "originalID": 35,
+      "author": "people",
+      "id": 31,
+      "message": "rostoooooooll",
+      "originalID": 2,
       "day": "19/2/2023"
     }
   ]

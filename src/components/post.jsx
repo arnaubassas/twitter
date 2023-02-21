@@ -94,7 +94,7 @@ const Post = () => {
             <div>
                 <SingleTweet author={tweet.author} day={tweet.day} key={tweet.id} id={tweet.id} message={tweet.message} deleteTweet={deleteTweet} />
                 <div className="post" >
-                    <form onSubmit={(e) => handleClick(e)} id="form">
+                    <form onSubmit={handleClick} id="form">
                         <div className="postParts">
                             <input className="name" type="text" name="author" placeholder="Name" values={values.message} onChange={handleChange}></input>
                         </div>

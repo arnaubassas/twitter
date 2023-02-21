@@ -3,12 +3,22 @@ import Tweets from './components/Tweets';
 import style from './style.css';
 import Post from "./components/post";
 import { Container } from "@mui/material";
-import { Route, Routes } from 'react-router-dom';
+import { Link, Route, Routes, useNavigate } from 'react-router-dom';
+import Search from "./components/search"
 
 function Twitter() {
-  
-  function handleSubmit() {
+  const [tweets, setTweets] = useState([])
+  const [search, setSearch] = useState("")
+  const navigate = useNavigate();
+
+  function onChangeSearch(e) {
+    setSearch(e.target.value);
   }
+
+  function handleSubmit(e) {
+    e.preventDefault();
+    navigate(`/search/${search}`);
+  };
 
   return (
     <Container>
@@ -28,14 +38,15 @@ function Twitter() {
         <section className='middle'>
           <div className="Search">
             <form onSubmit={handleSubmit}>
-              <input className="SearchIn" size="small" type="text" placeholder="Search" name='search' autoComplete='off'></input>
+              <input className="SearchIn" size="small" type="text" placeholder="Search" name='search' value={search} onChange={onChangeSearch} autoComplete='off'></input>
               <button type='submit' className="Searchbutton" variant="contained"></button>
             </form>
           </div>
           <div className="Cell">
             <Routes>
-              <Route path='/home' element={<Tweets/>} />
-              <Route path='/:id' element={<Post/>} />
+              <Route path='/home' element={<Tweets />} />
+              <Route path='/:id' element={<Post />} />
+              <Route path='/search/:search' element={<Search search={search} />} />
             </Routes>
           </div>
         </section>

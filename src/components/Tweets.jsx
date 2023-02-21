@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react"
-import { TextField } from "@mui/material";
 import OutsideClickHandler from 'react-outside-click-handler';
 import SingleTweet from "./singletweet";
 import { click } from "@testing-library/user-event/dist/click";

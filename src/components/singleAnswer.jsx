@@ -8,7 +8,8 @@ const SingleAnswer = ({ PID, author, day, id, originalID, message, oID, deleteAn
     useClickAway(ref, () => {
         setDown(false)
     })
-    if (originalID == PID) {
+    console.log(PID);
+    if (originalID == PID || PID == true) {
         return (
             <div className="answer">
                 <div className="Tweetlane"></div>
