@@ -25,7 +25,7 @@ function Twitter() {
       <div className="App">
         <section className='left'>
           <div className="button">
-            <a href="http://localhost:3000/home"><button className="logo"><img src="https://assets.stickpng.com/thumbs/580b57fcd9996e24bc43c53e.png" width='35' height='35' ></img></button></a>
+            <Link to="/home"><button className="logo"><img src="https://assets.stickpng.com/thumbs/580b57fcd9996e24bc43c53e.png" width='35' height='35' ></img></button></Link>
           </div>
           <div className="button">
             <button onClick={() => alert("not work")} className="Explore"><div className="insidebutton"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Hash-transbg.svg/1200px-Hash-transbg.svg.png" width='25' height='20'></img><span>&nbsp;Explore</span></div></button>
