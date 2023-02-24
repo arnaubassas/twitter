@@ -9,7 +9,7 @@ const Search = ({ search }) => {
 
 
     const fetchTweets = () => {
-        fetch(`http://localhost:5000/tweets?q=${search}`)
+        fetch(`/api/tweets?q=${search}`)
             .then((respnse) => respnse.json())
             .then(data => {
                 setTweets(data)
@@ -17,7 +17,7 @@ const Search = ({ search }) => {
     }
 
     const fetchAnswer = () => {
-        fetch(`http://localhost:5000/answers?q=${search}`)
+        fetch(`/api/answers?q=${search}`)
             .then((respnse) => respnse.json())
             .then(data => {
                 setAnswer(data)
@@ -25,18 +25,18 @@ const Search = ({ search }) => {
     }
 
     const deleteTweet = (id) => {
-        fetch(`http://localhost:5000/tweets/${id}`, { method: 'DELETE' })
+        fetch(`/api/tweets/${id}`, { method: 'DELETE' })
             .then(() => {
                 fetchTweets()
             })
         let filterAnswer = answer.filter(answer => answer.originalID === id);
         let length = filterAnswer.length;
         for (let i = 0; i < length; i++) {
-            fetch(`http://localhost:5000/answers/${filterAnswer[i].id}`, { method: 'DELETE' })
+            fetch(`/api/answers/${filterAnswer[i].id}`, { method: 'DELETE' })
         }
     }
     const deleteAnswer = (id) => {
-        fetch(`http://localhost:5000/Answers/${id}`, { method: 'DELETE' })
+        fetch(`/api/Answers/${id}`, { method: 'DELETE' })
             .then(() => {
                 fetchAnswer()
             })

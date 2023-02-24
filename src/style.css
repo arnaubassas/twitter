@@ -18,6 +18,8 @@
 .left {
     width: 20%;
     align-items: center;
+    border-right: solid 1px;
+    border-color: rgba(211, 211, 200, 0.56);
 }
 
 .lane {
@@ -270,10 +272,10 @@ a {
 }
 
 .post {
-    display: flex;
+
+    box-sizing: border-box;
     padding: 0px 0px;
-    border-top: solid 1px;
-    border-color: rgba(220, 220, 220, 0.70);
+
 }
 
 .postParts {
@@ -331,9 +333,8 @@ a {
     display: flex;
     justify-content: end;
     align-items: center;
-    border-top: solid 1px;
-    border-color: rgba(220, 220, 220, 0.70);
     height: 55px;
+    padding-right: 15px;
 }
 
 

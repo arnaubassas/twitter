@@ -34,7 +34,7 @@ function Twitter() {
             <button onClick={() => alert("not work")} className="Settings"><div className="insidebutton"><img src="https://cdn-icons-png.flaticon.com/512/126/126472.png" width='20' height='20'></img> <span>&nbsp; Settings</span></div></button>
           </div>
         </section>
-        <section className="lane laneleft"></section>
+
         <section className='middle'>
           <div className="Search">
             <form onSubmit={handleSubmit}>

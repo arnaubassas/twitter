@@ -26,7 +26,7 @@ const Post = () => {
     const handleClick = (e) => {
         e.preventDefault();
         console.log({ values });
-        Axios.post('http://localhost:5000/answers', {
+        Axios.post('/api/answers', {
             author: values.author,
             id: values.id,
             message: values.message,
@@ -41,14 +41,14 @@ const Post = () => {
 
 
     const fetchTweets = () => {
-        fetch(`http://localhost:5000/tweets/${id}`)
+        fetch(`/api/tweets/${id}`)
             .then((respnse) => respnse.json())
             .then(data => {
                 setTweet(data)
             })
     }
     const fetchAnswer = () => {
-        fetch('http://localhost:5000/answers')
+        fetch('/api/answers')
             .then((respnse) => respnse.json())
             .then(data => {
                 setAnswer(data)
@@ -60,20 +60,20 @@ const Post = () => {
     }, [])
 
     const deleteTweet = (id) => {
-        fetch(`http://localhost:5000/tweets/${id}`, { method: 'DELETE' })
+        fetch(`/api/tweets/${id}`, { method: 'DELETE' })
             .then(() => {
                 fetchAnswer()
             })
         let filterAnswer = answer.filter(answer => answer.originalID === id);
         let length = filterAnswer.length;
         for (let i = 0; i < length; i++) {
-            fetch(`http://localhost:5000/answers/${filterAnswer[i].id}`, { method: 'DELETE' })
+            fetch(`/api/answers/${filterAnswer[i].id}`, { method: 'DELETE' })
         }
         fetchTweets()
 
     }
     const deleteAnswer = (id) => {
-        fetch(`http://localhost:5000/Answers/${id}`, { method: 'DELETE' })
+        fetch(`/api/Answers/${id}`, { method: 'DELETE' })
             .then(() => {
                 fetchAnswer()
             })

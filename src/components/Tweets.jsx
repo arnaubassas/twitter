@@ -20,7 +20,7 @@ const Tweets = () => {
 
     const handleClick = (e) => {
         e.preventDefault();
-        Axios.post('http://localhost:5000/tweets', {
+        Axios.post('/api/tweets', {
             author: values.author,
             id: values.id,
             message: values.message,
@@ -32,7 +32,7 @@ const Tweets = () => {
 
 
     const fetchTweets = () => {
-        fetch('http://localhost:5000/tweets')
+        fetch('/api/tweets')
             .then((respnse) => respnse.json())
             .then(data => {
                 setTweets(data)
@@ -40,7 +40,7 @@ const Tweets = () => {
     }
 
     const fetchAnswer = () => {
-        fetch('http://localhost:5000/answers')
+        fetch('/api/answers')
             .then((respnse) => respnse.json())
             .then(data => {
                 setAnswer(data)
@@ -53,21 +53,21 @@ const Tweets = () => {
     }, [])
 
     const deleteTweet = (id) => {
-        fetch(`http://localhost:5000/tweets/${id}`, { method: 'DELETE' })
+        fetch(`/api/tweets/${id}`, { method: 'DELETE' })
             .then(() => {
                 fetchTweets()
             })
         let filterAnswer = answer.filter(answer => answer.originalID === id);
         let length = filterAnswer.length;
         for (let i = 0; i < length; i++) {
-            fetch(`http://localhost:5000/answers/${filterAnswer[i].id}`, { method: 'DELETE' })
+            fetch(`/api/answers/${filterAnswer[i].id}`, { method: 'DELETE' })
         }
 
 
     }
 
     const updateTweet = (id, tweet) => {
-        fetch(`http://localhost:5000/tweets/${id}`, { method: 'PUT' })
+        fetch(`/api/tweets/${id}`, { method: 'PUT' })
     }
 
 
@@ -83,6 +83,7 @@ const Tweets = () => {
                     <div className="postParts">
                         <textarea className="message" placeholder="What's happening?" name="message" maxLength="280" values={values.message} onChange={handleChange}></textarea>
                     </div>
+                    <div className="Tweetlane"></div>
                     <div className="buttonPost"><button className="send" type='submit'>Tweet</button></div>
                 </form>
             </div>
