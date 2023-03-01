@@ -2,57 +2,58 @@
   "tweets": [
     {
       "id": 2,
-      "author": "montse",
-      "message": "rostoooooooll",
+      "author": "Montse",
+      "message": "Como se debería cuidar un gato?",
       "day": "19/02/2023"
     },
     {
       "id": 3,
-      "author": "beneeeeit",
-      "message": "rostoooooooll",
+      "author": "Francesc",
+      "message": "La vida realmente está hecha para no contar calorías?",
       "day": "19/02/2023"
     },
     {
-      "author": "asdas",
-      "id": 78,
-      "message": "asdasdasasd",
-      "day": "19/2/2023"
-    },
-    {
-      "author": "mama",
+      "author": "Cristina",
       "id": 61,
-      "message": "a sopar\n",
+      "message": "nueva ley de genero, que opinais ",
       "day": "20/2/2023"
     }
   ],
   "Answers": [
     {
-      "author": "francesc",
+      "author": "arnau",
       "id": 92,
-      "message": "rostoll",
+      "message": "luego engordas",
       "originalId": 3,
       "day": "18/2/2023"
     },
     {
-      "author": "montse",
+      "author": "francesc",
       "id": 64,
-      "message": "casi pero no",
+      "message": "Dejandole su espacio",
       "originalID": 2,
       "day": "18/2/2023"
     },
     {
-      "author": "francesco ",
+      "author": "arnau ",
       "id": 25,
-      "message": "el cotxe mas rapido de tuti italia\n",
+      "message": "mimandole",
       "originalID": 2,
       "day": "18/2/2023"
     },
     {
-      "author": "people",
+      "author": "Montse",
       "id": 31,
-      "message": "rostoooooooll",
+      "message": "podria ser verdad",
       "originalID": 2,
       "day": "19/2/2023"
+    },
+    {
+      "author": "Montse",
+      "id": 64,
+      "message": "touche",
+      "originalID": 3,
+      "day": "18/2/2023"
     }
   ]
 }
